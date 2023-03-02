@@ -100,16 +100,16 @@ function ProductSeven( props ) {
                 </h3>
 
                 <div className="product-price">
-                    {
-                        product.price[ 0 ] !== product.price[ 1 ] ?
-                            < del className="new-price">${ toDecimal( product.price[ 0 ] ) } – ${ toDecimal( product.price[ 1 ] ) }</del>
-                            : product.discount > 0 && product.variants.length > 0 ?
-                                <>
-                                    <ins className="new-price">${ toDecimal( product.salePrice ) }</ins>
-                                    <del className="old-price">${ toDecimal( product.price ) }</del>
-                                </>
-                                : <ins className="new-price">${ toDecimal( product.price[ 0 ] ) }</ins>
-                    }
+                    {/*{*/}
+                    {/*    product.price[ 0 ] !== product.price[ 1 ] ?*/}
+                    {/*        < del className="new-price">${ toDecimal( product.price[ 0 ] ) } – ${ toDecimal( product.price[ 1 ] ) }</del>*/}
+                    {/*        : product.discount > 0 && product.variants.length > 0 ?*/}
+                    {/*            <>*/}
+                    {/*                <ins className="new-price">${ toDecimal( product.salePrice ) }</ins>*/}
+                    {/*                <del className="old-price">${ toDecimal( product.price ) }</del>*/}
+                    {/*            </>*/}
+                    {/*            : <ins className="new-price">${ toDecimal( product.price[ 0 ] ) }</ins>*/}
+                    {/*}*/}
 
                     <div className="product-action">
                         {

@@ -29,17 +29,17 @@ function DetailLeft( props ) {
             </div>
 
             <div className="product-price">
-                {
-                    product.data.price[ 0 ] !== product.data.price[ 1 ] ?
-                        product.data.variants.length === 0 || ( product.data.variants.length > 0 && !product.data.variants[ 0 ].price ) ?
-                            <>
-                                <ins className="new-price">${ toDecimal( product.data.price[ 0 ] ) }</ins>
-                                <del className="old-price">${ toDecimal( product.data.price[ 1 ] ) }</del>
-                            </>
-                            :
-                            < del className="new-price">${ toDecimal( product.data.price[ 0 ] ) } – ${ toDecimal( product.data.price[ 1 ] ) }</del>
-                        : <ins className="new-price">${ toDecimal( product.data.price[ 0 ] ) }</ins>
-                }
+                {/*{*/}
+                {/*    product.data.price[ 0 ] !== product.data.price[ 1 ] ?*/}
+                {/*        product.data.variants.length === 0 || ( product.data.variants.length > 0 && !product.data.variants[ 0 ].price ) ?*/}
+                {/*            <>*/}
+                {/*                <ins className="new-price">${ toDecimal( product.data.price[ 0 ] ) }</ins>*/}
+                {/*                <del className="old-price">${ toDecimal( product.data.price[ 1 ] ) }</del>*/}
+                {/*            </>*/}
+                {/*            :*/}
+                {/*            < del className="new-price">${ toDecimal( product.data.price[ 0 ] ) } – ${ toDecimal( product.data.price[ 1 ] ) }</del>*/}
+                {/*        : <ins className="new-price">${ toDecimal( product.data.price[ 0 ] ) }</ins>*/}
+                {/*}*/}
             </div>
 
             {
