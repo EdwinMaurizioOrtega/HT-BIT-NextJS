@@ -175,19 +175,19 @@ function ProductOne ( props ) {
                             <ALink href={ `/product/default/${ product.slug }` }>{ product.name }</ALink>
                         </h3>
 
-                        <div className="product-price">
-                            {
-                                product.price[ 0 ] !== product.price[ 1 ] ?
-                                    product.variants.length === 0 || ( product.variants.length > 0 && !product.variants[ 0 ].price ) ?
-                                        <>
-                                            <ins className="new-price">${ toDecimal( product.price[ 0 ] ) }</ins>
-                                            <del className="old-price">${ toDecimal( product.price[ 1 ] ) }</del>
-                                        </>
-                                        :
-                                        < del className="new-price">${ toDecimal( product.price[ 0 ] ) } – ${ toDecimal( product.price[ 1 ] ) }</del>
-                                    : <ins className="new-price">${ toDecimal( product.price[ 0 ] ) }</ins>
-                            }
-                        </div>
+                        {/*<div className="product-price">*/}
+                        {/*    {*/}
+                        {/*        product.price[ 0 ] !== product.price[ 1 ] ?*/}
+                        {/*            product.variants.length === 0 || ( product.variants.length > 0 && !product.variants[ 0 ].price ) ?*/}
+                        {/*                <>*/}
+                        {/*                    <ins className="new-price">${ toDecimal( product.price[ 0 ] ) }</ins>*/}
+                        {/*                    <del className="old-price">${ toDecimal( product.price[ 1 ] ) }</del>*/}
+                        {/*                </>*/}
+                        {/*                :*/}
+                        {/*                < del className="new-price">${ toDecimal( product.price[ 0 ] ) } – ${ toDecimal( product.price[ 1 ] ) }</del>*/}
+                        {/*            : <ins className="new-price">${ toDecimal( product.price[ 0 ] ) }</ins>*/}
+                        {/*    }*/}
+                        {/*</div>*/}
 
                         <div className="ratings-container">
                             <div className="ratings-full">
@@ -240,27 +240,27 @@ function ProductOne ( props ) {
                                     }
 
                                     <div className='product-variation-price'>
-                                        <Collapse in={ cartActive && curIndex > -1 }>
-                                            <div className="card-wrapper">
-                                                {
-                                                    curIndex > -1 ?
-                                                        <div className="single-product-price">
-                                                            {
-                                                                product.variants[ curIndex ].price ?
-                                                                    product.variants[ curIndex ].sale_price ?
-                                                                        <div className="product-price mb-0">
-                                                                            <ins className="new-price">${ toDecimal( product.variants[ curIndex ].sale_price ) }</ins>
-                                                                            <del className="old-price">${ toDecimal( product.variants[ curIndex ].price ) }</del>
-                                                                        </div>
-                                                                        : <div className="product-price mb-0">
-                                                                            <ins className="new-price">${ toDecimal( product.variants[ curIndex ].price ) }</ins>
-                                                                        </div>
-                                                                    : ""
-                                                            }
-                                                        </div> : ''
-                                                }
-                                            </div>
-                                        </Collapse>
+                                        {/*<Collapse in={ cartActive && curIndex > -1 }>*/}
+                                        {/*    <div className="card-wrapper">*/}
+                                        {/*        {*/}
+                                        {/*            curIndex > -1 ?*/}
+                                        {/*                <div className="single-product-price">*/}
+                                        {/*                    {*/}
+                                        {/*                        product.variants[ curIndex ].price ?*/}
+                                        {/*                            product.variants[ curIndex ].sale_price ?*/}
+                                        {/*                                <div className="product-price mb-0">*/}
+                                        {/*                                    <ins className="new-price">${ toDecimal( product.variants[ curIndex ].sale_price ) }</ins>*/}
+                                        {/*                                    <del className="old-price">${ toDecimal( product.variants[ curIndex ].price ) }</del>*/}
+                                        {/*                                </div>*/}
+                                        {/*                                : <div className="product-price mb-0">*/}
+                                        {/*                                    <ins className="new-price">${ toDecimal( product.variants[ curIndex ].price ) }</ins>*/}
+                                        {/*                                </div>*/}
+                                        {/*                            : ""*/}
+                                        {/*                    }*/}
+                                        {/*                </div> : ''*/}
+                                        {/*        }*/}
+                                        {/*    </div>*/}
+                                        {/*</Collapse>*/}
                                     </div>
 
                                 </>
